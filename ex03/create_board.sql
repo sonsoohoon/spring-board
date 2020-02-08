@@ -1,4 +1,4 @@
-create database bbs deafult CHARACTER SET UTF8;
+create database bbs default CHARACTER SET UTF8;
 
 CREATE TABLE `tbl_board` (
   `bno` int(10) NOT NULL,
