@@ -51,8 +51,8 @@
  </select>
  
  <insert id="insert">
- 	insert into tbl_board (title, content, writer)
- 	values (#{title}, #{content}, #{writer})
+ 	insert into tbl_board (bno, title, content, writer)
+ 	values (get_seq('boardSeq'), #{title}, #{content}, #{writer})
  </insert>
  
  <insert id="insertSelectKey">
