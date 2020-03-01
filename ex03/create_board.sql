@@ -51,3 +51,6 @@ VALUES (0, 'boardSeq');
 
 /* 시퀀스 삽입 */
 get_seq('boardSeq')
+
+/* 댓글 페이징을 위한 인덱스 생성 */
+create index idx_reply on tbl_reply (bno desc, rno asc);
