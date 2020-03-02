@@ -22,7 +22,7 @@ public class JDBCTest {
 	
 	@Test
 	public void testConnection() {
-		try(Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/BBS?useSSL=false&amp;serverTimezone=Asia/Seoul", "root", "sinsiway")){
+		try(Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/BBS?useSSL=false&amp;serverTimezone=Asia/Seoul;useUnicode=true&characterEncoding=utf8", "root", "sinsiway")){
 			log.info(con);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
