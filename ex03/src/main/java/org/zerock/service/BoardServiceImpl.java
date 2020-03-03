@@ -15,7 +15,7 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 public class BoardServiceImpl implements BoardService {
 
-	//s@Setter(onMethod_ = @Autowired)
+	//@Setter(onMethod_ = @Autowired)
 	private BoardMapper mapper;
 	
 	@Override
