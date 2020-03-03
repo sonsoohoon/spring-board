@@ -54,3 +54,10 @@ get_seq('boardSeq')
 
 /* 댓글 페이징을 위한 인덱스 생성 */
 create index idx_reply on tbl_reply (bno desc, rno asc);
+
+--댓글 갯수 컬럼 추가
+alter table tbl_board add replycnt int default 0;
+
+--현재 댓글 갯수 마이그레이션
+update tbl_board set replycnt = 
+(select count(rno) from tbl_reply where tbl_reply.bno = tbl_board.bno);
